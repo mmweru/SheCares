@@ -1,0 +1,117 @@
+body {
+  max-width: 1280px;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  background: radial-gradient(circle at center, #171819, #000000); /* Dark background */
+  position: relative; /* Ensure positioning context for the pseudo-element */
+  z-index: 1; /* Higher z-index to keep content on top */
+}
+
+/* Services Container */
+.services-container {
+  text-align: center;
+  background: radial-gradient(circle at center, #171819, #000000); /* Dark background */
+  margin: 100px 0;
+  color: white; /* Change text color for visibility */
+  align-items: center; /* Center horizontally */
+
+}
+
+.services-title {
+  font-size: 46px;
+  padding-top: 20px;
+  margin-bottom: 30px;
+  padding-inline-end: 34%;
+  position: relative;
+  background: -webkit-linear-gradient(46deg, #eb3ceb, #ff5546);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.service-icon {
+  width: 70px; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 15px; /* Space between icon and text */
+  position: relative;
+}
+
+/* Space between cards and carousels */
+.carousel-spacing {
+  height: 100px; /* Adjust height as needed */
+}
+
+/* Carousel Container with Neon Purple Background */
+.carousel-container {
+  position: relative;
+  height: 45px; /* Increased height for the carousel */
+  overflow: hidden;
+  margin-bottom: 10px; /* Space between carousels */
+  background-color: rgb(189, 10, 239) rgb(187, 165, 193); /* Neon purple background */
+  border-radius: 10px; /* Rounded corners */
+  padding: 10px 0; /* Add padding for better appearance */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+}
+
+/* Carousel Items Styling */
+.carousel {
+  display: flex;
+  animation: scroll 30s linear infinite; /* Reduced speed */
+}
+
+.carousel-left {
+  animation-direction: normal; /* Scroll left to right */
+}
+
+.carousel-right {
+  animation-direction: reverse; /* Scroll right to left */
+}
+
+.carousel-item {
+  padding: 0 30px; /* Increased padding for spacing */
+  white-space: nowrap; /* Prevent text from wrapping */
+  font-size: 18px; /* Adjust font size as needed */
+  font-weight: normal; /* Make text bold */
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.9); /* Slightly transparent white for better readability */
+  text-shadow: 0 0 10px rgba(114, 0, 146, 0.9); /* Neon glow effect for carousel items */
+}
+
+/* Animation for carousels */
+@keyframes scroll {
+  0% {
+    transform: translateX(100%); /* Start off screen */
+  }
+  100% {
+    transform: translateX(-100%); /* End off screen */
+  }
+}
+
+/* Services Cards */
+.services-cards {
+  display: flex;
+  margin-inline-start: 2%;
+  gap: 20px; /* Space between cards */
+}
+
+.service-card {
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+  border-radius: 10px;
+  padding: 20px;
+  width: 365px; /* Fixed width for uniformity */
+  height: 200px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+  transform: scale(1.05); /* Scale effect on hover */
+  box-shadow: 0 8px 30px rgba(114, 0, 146, 0.7); /* Neon shadow effect */
+}
+
+.service-card h3 {
+  color: rgb(211, 4, 194);
+  font-size: 20px;
+}
+.service-card p {
+  color: white; /* Ensure all text inside the card is white */
+
+}

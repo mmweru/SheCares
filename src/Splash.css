@@ -1,0 +1,162 @@
+/* New Background Effects */
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle at center, #171819, #000000); /* Dark background */
+    overflow: hidden;
+    z-index: -1;
+  }
+  
+  /* Buffer space for spacing between content and services */
+  .buffer-space {
+    height: 500px; /* Adjust the height as needed */
+    background: transparent;
+  }
+  
+  /* Neon Light Effect */
+  .neon-line {
+    position: absolute;
+    width: 100vw;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(114, 0, 146, 0.8), transparent); /* Neon purple */
+    animation: flicker 3s infinite;
+    opacity: 0.6; /* Increased visibility */
+  }
+  
+  /* Grid Effect */
+  .grid-container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    gap: 2px;
+    z-index: -1;
+  }
+  
+  .grid-item {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    height: 100%;
+    animation: lightPulse 4s infinite;
+  }
+  
+  /* Animations */
+  @keyframes flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+      opacity: 0.3;
+    }
+    20%, 24%, 55% {
+      opacity: 0.8;
+    }
+  }
+  
+  @keyframes lightPulse {
+    0%, 100% {
+      opacity: 0.1;
+    }
+    50% {
+      opacity: 0.3;
+    }
+  }
+  
+  /* Navigation Menu */
+  .navigation {
+    width: 100%;
+    height: 55px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(200, 5, 158);
+    padding: 10px 0;
+    z-index: 10;
+  }
+  
+  /* Hover effect for nav items */
+  .nav-item {
+    position: relative;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 10px 20px;
+    margin: 0 15px;
+  }
+  
+  .nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: rgb(240, 240, 240); /* Neon purple */
+    transition: width 0.3s ease, left 0.3s ease;
+  }
+  
+  .nav-item:hover::after {
+    width: 50px;
+    left: 0;
+  }
+  
+  /* Styles for images and text */
+  .girl-image {
+    width: 45.75vw;
+    height: auto;
+    position: absolute;
+    top: 5vh;
+    left: 43vw;
+    transform: translateX(-15%);
+    max-height: 140vh;
+    margin-top: 10px;
+  }
+  
+  .new-text {
+    width: 638px;
+    height: 127px;
+    color: white;
+    font-size: 32px;
+    font-family: 'Castoro', serif;
+    font-style: italic;
+    font-weight: 400;
+    position: absolute;
+    top: 70vh;
+    left: 25%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+  
+  .main-title {
+    position: absolute;
+    top: 20vh;
+    left: 63.2vw;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 10vh;
+    font-family: 'Castoro', serif;
+    font-style: italic;
+    font-weight: 400;
+    width: 410px;
+    word-wrap: break-word;
+  }
+  
+  .sub-title {
+    position: absolute;
+    top: 28vh;
+    left: 55.5vw;
+    transform: translateX(-50%);
+    width: 348px;
+    color: white;
+    font-size: 10vh;
+    font-family: 'Castoro', serif;
+    font-style: italic;
+    font-weight: 400;
+    word-wrap: break-word;
+  }
+  
